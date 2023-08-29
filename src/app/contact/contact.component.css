@@ -1,0 +1,124 @@
+section {
+  background: url("../../assets/images/bg.jpg");
+  min-height: 100vh;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  height: 100%;
+}
+
+.slide-bottom h1 {
+  font-size: 2.5rem;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.slide-bottom p {
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.form-control {
+  background-color: rgba(150, 145, 145, 0.3);
+  border-color: rgba(150, 145, 145, 0.3);
+  outline: none;
+  color: #fff;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: aqua;
+}
+
+.form-control::placeholder {
+  color: #bfbcbc;
+}
+
+input.form-control {
+  height: 44px;
+}
+
+.container .btn {
+  background-color: rgb(54, 201, 201);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.slide-bottom {
+  transition: all 0.5s ease;
+  opacity: 0;
+  animation: slide-bottom 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes slide-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade {
+  transition: all 0.5s ease;
+  opacity: 0;
+  animation: fade 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.slide-right {
+  transition: all 0.5s ease;
+  opacity: 0;
+  animation: slide-right 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  transition: all 0.5s ease;
+  opacity: 0;
+  animation: slide-left 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

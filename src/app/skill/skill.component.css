@@ -1,0 +1,96 @@
+section {
+  background: url("../../assets/images/bg.jpg");
+  min-height: 100vh;
+  height: 100%;
+  overflow-y: auto;
+  font-family: sans-serif;
+}
+
+.container {
+  padding-top: 80px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: aqua;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+p {
+  text-align: justify;
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding-left: 180px;
+    padding-top: 40px;
+  }
+}
+
+.container .service {
+  transition: all 0.5s;
+}
+
+.container .service:hover {
+  box-shadow: -6px 6px 0 0 rgb(71, 252, 186);
+}
+
+a {
+  color: rgb(150, 150, 238);
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.5em;
+  margin-left: -0.5em;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+a::before,
+a::after {
+  position: absolute;
+  content: "";
+  border-bottom: 3px solid rgb(150, 150, 238);
+  border-radius: 1em;
+  bottom: 0.3em;
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+a::before {
+  width: 1em;
+  transform-origin: left;
+}
+
+a::after {
+  width: 82%;
+  left: 1em;
+  transform: translateX(110%);
+}
+
+a:hover:before {
+  transform: scaleX(0.3);
+}
+
+a:hover:after {
+  transform: translateX(0);
+}
+
+.slide-top {
+  transition: all 0.5s ease;
+  opacity: 0;
+  animation: slide-top 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
