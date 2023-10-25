@@ -1,2 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+
+:root {
+  --main-color: #2b2d42;
+  --nav-color: #20305a;
+  --active-link-color: #18a4cf;
+}

@@ -2,8 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
 section {
-  background: url("../../assets/images/bg.jpg") no-repeat;
-  /* background: #110725; */
+  background: var(--main-color);
   color: #e8dff6;
   min-height: 100vh;
   height: 100%;
@@ -11,13 +10,20 @@ section {
 }
 
 .container {
-  padding-top: 80px;
+  padding-top: 60px;
+  padding-left: 200px;
 }
 
-@media (min-width: 992px) {
+@media screen and (max-width: 1270px) {
   .container {
-    padding-left: 200px;
-    padding-top: 40px;
+    padding-left: 300px;
+    padding-top: 60px;
+  }
+}
+
+@media screen and (max-width: 994px) {
+  .container {
+    padding-left: 10px;
   }
 }
 
@@ -26,7 +32,7 @@ p {
   letter-spacing: 2px;
   font-size: 1rem;
   font-weight: 500;
-  padding: 20px 0;
+  padding: 20px 20px 20px 0;
 }
 
 .details .greet {
@@ -74,6 +80,11 @@ p {
   background: rgba(0, 0, 0, 0.2);
 }
 
+.project a {
+  text-decoration: none;
+  color: #fff;
+}
+
 @keyframes popup {
   0% {
     opacity: 0;
@@ -104,6 +115,10 @@ p {
   text-decoration: none;
 }
 
+.email .mail {
+  font-size: 20px;
+}
+
 .social-media a {
   text-decoration: none;
   width: 40px;
@@ -118,6 +133,21 @@ p {
   opacity: 0;
   animation: slideleft 1s ease forwards;
   animation-delay: calc(0.2s * var(--i));
+}
+
+.social-media i {
+  width: 40px;
+  height: 40px;
+  clip-path: circle();
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.social-media i:hover {
+  box-shadow: inset 0 0 25px #8db0f64d;
 }
 
 @keyframes slideleft {
@@ -137,22 +167,21 @@ p {
   animation-delay: calc(0.2s * var(--i));
 }
 
-.img-div {
-  width: 50% !important;
+.animation {
   opacity: 0;
   animation: popup 1s ease forwards;
   animation-delay: 1.8s;
 }
 
-.bg {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: rgb(205, 205, 69);
+.animation img {
+  width: 90em;
+  mix-blend-mode: color-burn;
+  transition: 1.5s;
+  filter: contrast(150%);
 }
 
-.img img {
-  width: 100%;
+.animation img:hover {
+  transform: translateY(-7px);
 }
 
 .first-div {
@@ -165,10 +194,3 @@ p {
     font-size: 1.8rem !important;
   }
 }
-
-/* @media screen and (max-width: 565px) {
-  .greet {
-    font-weight: 500;
-    font-size: 1rem !important;
-  }
-} */

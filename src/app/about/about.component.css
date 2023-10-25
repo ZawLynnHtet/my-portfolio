@@ -4,7 +4,7 @@
 }
 
 section {
-  background: url("../../assets/images/bg.jpg");
+  background: var(--main-color);
   min-height: 100vh;
   height: 100%;
   overflow-y: auto;
@@ -23,35 +23,35 @@ section {
   color: aqua;
   font-family: sans-serif;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .container {
-  padding-top: 80px;
+  padding-top: 40px;
+  padding-left: 200px;
 }
 
-@media (min-width: 992px) {
+@media screen and (max-width: 1270px) {
   .container {
-    padding-left: 200px;
-    padding-top: 40px;
+    padding-left: 300px;
+    padding-top: 80px;
   }
 }
 
-.about-col {
-  display: flex;
-  gap: 20px;
-  margin-top: 15px;
+@media screen and (max-width: 994px) {
+  .container {
+    padding-left: 10px;
+  }
 }
 
-.about-col .img-col {
-  flex-basis: 35%;
-  text-align: center;
+.container .content {
+  font-family: sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
-.about-col .img-col img {
-  width: 100%;
-}
-
-.about-col .info-col {
+.info-col {
   flex-basis: 70%;
 }
 
@@ -62,10 +62,7 @@ section {
   font-weight: 600;
 }
 
-.info-col p {
-  font-size: 18px;
-  font-family: sans-serif;
-  font-weight: 400;
+.info-col .content {
   font-style: italic;
 }
 
@@ -86,6 +83,10 @@ section {
   font-weight: 400;
 }
 
+i {
+  margin-right: 5px;
+}
+
 .fade {
   transition: all 0.5s ease;
   opacity: 0;
@@ -104,7 +105,7 @@ section {
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .about-col {
     flex-direction: column;
   }
@@ -113,15 +114,36 @@ section {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .icon-list-col {
     flex-direction: column;
     gap: 10px;
   }
 }
+@media screen and (max-width: 600px) {
+  .content {
+    font-size: 1rem !important;
+  }
+}
 
-@media only screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .about-col .img-col img {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  h1,
+  h2 {
+    font-size: 1.5rem !important;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  h1,
+  h2 {
+    font-size: 1.4rem !important;
+    font-weight: 400 !important;
   }
 }
